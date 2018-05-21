@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_669259_va8k7zf9jagzxgvi.css">
+    <style>
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+       body{
+           font:14px/1.5 Arial;
+       }
+       a{
+           text-decoration: none;
+       }
+       ul{
+           list-style: none;
+       }
+       .cleafix::after{
+           content: "";
+           display: block;
+           clear: both;
+       }
+       .layout{
+           width: 1140px;
+           margin: 0 auto;
+       }
+       .buttom{
+           display: inline-block;
+           font-size: 10px;
+           color: white;
+           background: #fed136;
+           padding: 5px 10px;
+           border-radius: 5px;
+       }
+       html,body{
+           height: 100%;
+       }
+       header{
+           position: relative;
+           height: 100%;
+           min-height: 600px;
+           background: url(http://pic1.win4000.com/wallpaper/6/5279eb45d5a9f.jpg) center center no-repeat;
+           background-size: cover;
+             }
+       header .logo{
+           color: yellow;
+           font-size: 32px;
+           float: left;
+           margin-top: 10px;
+       }
+       header .nav{
+           float: right;
+       }
+
+       header .nav > li{
+           float: left;
+           margin: 10px;
+
+       }
+       header .nav a{
+           display: inline-block;
+           color: white;
+           font-size: 16px;
+       }
+       header .nav a:hover{
+           color: #fed136
+       }
+       header .introduce{
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           color: white;
+           text-align: center;
+           transform: translate(-50%, -50%);
+       }
+       .introduce > h2{
+           font-size: 28px;
+       }
+       .introduce > h3{
+           font-size: 40px;
+           margin-top: 20px;
+       }
+       header .introduce .buttom{
+           margin-top: 20px;
+       }
+       section{
+           text-align: center;
+           margin-top: 30px;
+       }
+       section > h2{
+           font-size: 40px;
+       }
+       section > p{
+           font-size: 15px;
+       }
+       section .style > li{
+           float: left;
+           width: 33.33%;
+           padding: 10px 20px;
+       }
+       section > ul .iconfont{
+           font-size: 60px;
+           display: inline-block;
+           border: 1px;
+           width: 100px;
+           height: 100px;
+           border-radius: 100%;
+           background: yellow;
+       }
+       section > ul p{
+           margin-top: 10px;
+           
+       }
+       section >.portfolio img{
+           height: 100%;
+           width: 100%;
+       }
+       section >.portfolio li{
+           width: calc(33.33% - 20px);
+           margin:50px  10px;
+           padding: 0;
+           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           }
+       section >.portfolio h2{
+           margin: 10px;
+       }
+       section >.portfolio p{
+           margin: 10px;
+           color: #666;
+       }
+       section >.portfolio a:hover{
+           opacity: 0.5;
+       }
+       section .about img{
+           width: 100px;
+           height: 100px;
+           border: 3px solid #3467b3;
+           border-radius: 50%;
+           
+       }
+       section .about:nth-child(odd)  img{
+           
+           float: right;
+       }
+       
+       section .about > li{
+           margin-top: 100px;
+           position: relative;
+          
+       }
+       section .about > li:nth-child(odd) {
+           
+           padding-right: calc(50% - 50px);
+           text-align: right;
+       }
+       .about > li:nth-child(odd)  h3{
+           padding-right: 120px;
+       }
+       .about > li:nth-child(odd)  p{
+           padding-right: 120px;
+       }
+       section .about  li:nth-child(even) img{
+           
+           float: left ;
+       }
+       section .about > li:nth-child(even){
+           
+           padding-left: calc(50% - 50px);
+           text-align: left;
+       }
+       .about > li:nth-child(even) h3{
+           padding-left: 120px;
+       }
+       .about > li:nth-child(even) p{
+           padding-left: 120px;
+       }
+       section .about > li::after{
+           content: "";
+           display: block;
+           clear: both;
+       }
+       section .about > li::before{
+           content: "";
+           display: inline-block;
+           height: 122px;
+           width: 2px;
+           background: blue;
+           position: absolute;
+           
+           left: 569px;
+           top: 100px;
+       }
+       .ending{
+           width: 100px;
+           height: 100px;
+           border: 3px solid #3467b3;
+           border-radius: 50%;
+           margin: 100px auto;
+           padding: 10px;
+
+       } 
+       .team li{
+           display: inline-block;
+           margin: 50px;
+       } 
+       .team li > img{
+           border: 5px solid white;
+           border-radius: 50%;
+       }
+       section > .team a{
+           color: white;
+           background: black;
+           font-size: 30px;
+           height: 50px;
+           width: 50px;;
+           margin: 10px;
+       }
+       section  > .team a:hover{
+           background: #fed136;
+       }
+       section > .brand > li{
+           width: calc(25% - 30px);
+           margin:50px 10px;
+       }
+       .contact{
+        height: 100%;
+           min-height: 600px;
+           background: url(http://p1.so.qhmsg.com/bdr/_240_/t013fb221f862bae3d6.jpg) center center no-repeat;
+           background-size: cover;
+           margin-top: 200px;
+           width: 100%;
+           position: relative;
+       }
+       form > div > input{
+           display: block;
+           height: 50px;
+           margin-top: 10px;
+           width: 400px;
+       }
+       form > div {
+           float: left;
+           position: absolute;
+           top: 200px;
+           left: 150px;
+           
+           
+       }
+       form > textarea{
+           height: 170px;
+           
+           width: 400px;
+           float: right;
+           position: absolute;
+           top: 210px;
+           left: 580px;
+
+       }
+       .contact > div .buttom{
+           margin-top:400px;
+       }
+       section h2{
+           margin-top: 50px;
+       }
+       footer > div{
+           display: inline-block;
+           margin:30px auto;
+           margin-left: 200px;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar cleafix layout">
+            <a href="#" class="logo">Start Project</a>
+            <ul class="nav ">
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="introduce">
+            <h2>Welcome To Our Studio!</h2>
+            <h3>IT'S NICE TO MEET YOU</h3>
+            <a href="#" class="buttom">TELL ME MORE</a>
+        </div>
+    </header>
+    <main class="layout">
+       <section>
+           <h2>SERVICES</h2>
+           <p>Lorem ipsum dolor sit amet consectetur.</p>
+           <ul class="cleafix style">
+               <li>
+                   <span class="iconfont icon-gouwu"></span>
+                   <h3>E-Commerce</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+               </li>
+               <li>
+                   <span class="iconfont icon-diannao"></span>
+                   <h3>Responsive Design</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+               </li>
+               <li>
+                   <span class="iconfont icon-suo"></span>
+                   <h3>Web Security</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+               </li>
+           </ul>
+       </section>
+       <section >
+            <h2>PORTFOLIO</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <ul class="portfolio cleafix style">
+                <li>
+                    <figure>
+                    <a href="#"><img src="http://img1.gamedog.cn/2017/01/25/1565819-1F1250926220.jpg" alt=""></a>
+                    <h2>Round Icons</h2>
+                    <p>Graphic Design</p>
+                    </figure>
+                </li>
+                <li>
+                    <a href="#"><img src="http://img1.gamedog.cn/2017/01/25/1565819-1F1250926220.jpg" alt=""></a>
+                    <h2>Round Icons</h2>
+                    <p>Graphic Design</p>
+                </li>
+                <li>
+                    <a href="#"><img src="http://img1.gamedog.cn/2017/01/25/1565819-1F1250926220.jpg" alt=""></a>
+                    <h2>Round Icons</h2>
+                    <p>Graphic Design</p>
+                </li>
+                <li>
+                    <a href="#"><img src="http://img1.gamedog.cn/2017/01/25/1565819-1F1250926220.jpg" alt=""></a>
+                    <h2>Round Icons</h2>
+                    <p>Graphic Design</p>
+                </li>
+                <li>
+                    <a href="#"><img src="http://img1.gamedog.cn/2017/01/25/1565819-1F1250926220.jpg" alt=""></a>
+                    <h2>Round Icons</h2>
+                    <p>Graphic Design</p>
+                </li>
+                <li>
+                <a href="#"><img src="http://img1.gamedog.cn/2017/01/25/1565819-1F1250926220.jpg" alt=""></a>
+                <h2>Round Icons</h2>
+                <p>Graphic Design</p>
+                </li>
+            </ul>
+       </section>
+       <section>
+           <h2>ABOUT</h2>
+           <p>Lorem ipsum dolor sit amet consectetur.</p>
+           <ul class="about">
+               <li>
+                   <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/4.jpg" alt="">
+                   <h3>JULY 2014</h3>
+                   <h3>Phase Two Expansion</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+               </li>
+               <li>
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/4.jpg" alt="">
+                <h3>JULY 2014</h3>
+                <h3>Phase Two Expansion</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+               </li>
+               <li>
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/4.jpg" alt="">
+                <h3>JULY 2014</h3>
+                <h3>Phase Two Expansion</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+               </li>
+               <li>
+                <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/4.jpg" alt="">
+                <h3>JULY 2014</h3>
+                <h3>Phase Two Expansion</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+               </li>
+           </ul>
+           <div class="ending">BE PART 
+            OF OUR 
+            STORY!</div>
+       </section>
+         
+       <section>
+           <h2>OUR AMAZING TEAM</h2>
+           <p>Lorem ipsum dolor sit amet consectetur.</p>
+           <ul class="team">
+               <li>
+                   <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/team/5.jpg" alt="">
+                   <h3>Kay Garland</h3>
+                   <p>Lead Designer</p>
+                   <div>
+                       <a class="iconfont icon-gouwu" href="#"></a>
+                       <a  class="iconfont icon-diannao" href="#"></a>
+                       <a class="iconfont icon-suo" href="#"></a>
+                   </div>
+                </li>
+               <li>
+                    <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/team/5.jpg" alt="">
+                    <h3>Kay Garland</h3>
+                    <p>Lead Designer</p>
+                    <div>
+                        <a class="iconfont icon-gouwu" href="#"></a>
+                        <a  class="iconfont icon-diannao" href="#"></a>
+                        <a class="iconfont icon-suo" href="#"></a>
+                    </div>
+               </li>
+               <li>
+                    <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/team/5.jpg" alt="">
+                    <h3>Kay Garland</h3>
+                    <p>Lead Designer</p>
+                    <div>
+                        <a class="iconfont icon-gouwu" href="#"></a>
+                        <a  class="iconfont icon-diannao" href="#"></a>
+                        <a class="iconfont icon-suo" href="#"></a>
+                    </div>
+               </li>
+           </ul>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+
+       </section>
+       <section>
+           <ul class="style brand">
+               <li>
+                   <a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/designmodo.jpg" alt=""></a>
+               </li>
+               <li>
+                    <a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/designmodo.jpg" alt=""></a>
+               </li>
+               <li>
+                    <a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/designmodo.jpg" alt=""></a>
+               </li>
+               <li>
+                    <a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/designmodo.jpg" alt=""></a>
+               </li>
+           </ul>
+       </section>
+       <section class="contact ">
+           <h2>CONTACT US</h2>
+           <p>Lorem ipsum dolor sit amet consectetur.</p>
+           <form action="">
+               <div class=".cleafix">
+                   <input type="text" name="NAME" placeholder="YOUR NAME">
+                   <input type="TEXT" name="EMAIL" placeholder="YOUR EMAIL">
+                   <input type="text" name="PHONE" placeholder="YOUR PHONE">
+               </div>
+              <textarea class=".cleafix" name="评论" placeholder="YUUR MESSAGE" ></textarea>
+            </form>
+           <div><a href="#" class="buttom">TELL ME MORE</a></div>
+            
+       </section>
+    </main>
+    <footer>
+        <div>Copyright © Your Website 2014</div>
+        <div class="team">
+            <span><a class="iconfont icon-diannao" href="#"></a></span>
+            <span><a class="iconfont icon-gouwu" href="#"></a></span>
+            <span><a class="iconfont icon-suo" href="#"></a></span>
+        </div>
+        <div>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+        </div>
+    </footer>
+</body>
+</html>
+                                                    
